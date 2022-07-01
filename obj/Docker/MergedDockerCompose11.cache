@@ -1,0 +1,37 @@
+services:
+  mongo:
+    image: mongo
+  tweetapp-api:
+    build:
+      context: C:\Users\cogdotnet74\source\repos\App-Cloud-master
+      dockerfile: TweetApp-API/Dockerfile
+      labels:
+        com.microsoft.created-by: visual-studio
+        com.microsoft.visual-studio.project-name: TweetApp-API
+    container_name: TweetApp-API
+    entrypoint: tail -f /dev/null
+    environment:
+      ASPNETCORE_ENVIRONMENT: Development
+      MongoConnection:ConnectionString: mongodb://mongo:27017
+      MongoConnection:Database: tweetapp
+    image: tweetappapi
+    labels:
+      com.microsoft.visual-studio.project-name: TweetApp-API
+      com.microsoft.visualstudio.debuggee.arguments: ' --additionalProbingPath /root/.nuget/packages
+        --additionalProbingPath /root/.nuget/fallbackpackages --additionalProbingPath
+        /root/.nuget/fallbackpackages2  "/app/TweetApp-API.dll"'
+      com.microsoft.visualstudio.debuggee.killprogram: /bin/sh -c "if PID=$$(pidof
+        dotnet); then kill $$PID; fi"
+      com.microsoft.visualstudio.debuggee.program: dotnet
+      com.microsoft.visualstudio.debuggee.workingdirectory: /app
+    ports:
+    - published: 8080
+      target: 80
+    - published: 1443
+      target: 1433
+    tty: true
+    volumes:
+    - C:\Users\cogdotnet74\vsdbg\vs2017u5:/remote_debugger:rw
+    - C:\Users\cogdotnet74\AppData\Roaming\ASP.NET\Https:/root/.aspnet/https:ro
+    - C:\Users\cogdotnet74\AppData\Roaming\Microsoft\UserSecrets:/root/.microsoft/usersecrets:ro
+version: '3.4'

@@ -1,6 +1,6 @@
 {
   "version": 2,
-  "dgSpecHash": "WhZLBOstSTtwEMaWepAUy/y/58T/f1VvHqM6JVRsPh/T7TvZbltkX4drWiIZ1PriacEYKKJ1RKENaiRL9PI7pg==",
+  "dgSpecHash": "22I6EaES+q4FuSY/E8pKFRwXwOStXsPuasg/p0QebubZPbJk9O59u64JgTizTCEzFv/ccACT7V354AvLPSnhfQ==",
   "success": true,
   "projectFilePath": "C:\\Users\\cogdotnet74\\source\\repos\\App-Cloud-master\\TweetApp-API\\TweetApp-API.csproj",
   "expectedPackageFiles": [
@@ -16,6 +16,7 @@
     "C:\\Users\\cogdotnet74\\.nuget\\packages\\microsoft.netcore.platforms\\5.0.0\\microsoft.netcore.platforms.5.0.0.nupkg.sha512",
     "C:\\Users\\cogdotnet74\\.nuget\\packages\\microsoft.netcore.targets\\1.1.0\\microsoft.netcore.targets.1.1.0.nupkg.sha512",
     "C:\\Users\\cogdotnet74\\.nuget\\packages\\microsoft.openapi\\1.2.3\\microsoft.openapi.1.2.3.nupkg.sha512",
+    "C:\\Users\\cogdotnet74\\.nuget\\packages\\microsoft.visualstudio.azure.containers.tools.targets\\1.11.1\\microsoft.visualstudio.azure.containers.tools.targets.1.11.1.nupkg.sha512",
     "C:\\Users\\cogdotnet74\\.nuget\\packages\\microsoft.win32.primitives\\4.3.0\\microsoft.win32.primitives.4.3.0.nupkg.sha512",
     "C:\\Users\\cogdotnet74\\.nuget\\packages\\microsoft.win32.registry\\5.0.0\\microsoft.win32.registry.5.0.0.nupkg.sha512",
     "C:\\Users\\cogdotnet74\\.nuget\\packages\\mongodb.bson\\2.16.1\\mongodb.bson.2.16.1.nupkg.sha512",

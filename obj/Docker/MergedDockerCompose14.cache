@@ -1,0 +1,22 @@
+services:
+  mongo:
+    image: mongo
+  mongo-server:
+    environment:
+      MongoConnection:ConnectionString: mongodb://mongo:27017
+      MongoConnection:Database: tweetapp
+    image: mongo
+  tweetapp-api:
+    build:
+      context: C:\Users\cogdotnet74\source\repos\App-Cloud-master
+      dockerfile: TweetApp-API/Dockerfile
+    depends_on:
+      mongo-server:
+        condition: service_started
+    environment:
+      ASPNETCORE_ENVIRONMENT: Development
+    image: tweetappapi
+    ports:
+    - published: 8000
+      target: 80
+version: '3.4'

@@ -1,0 +1,17 @@
+services:
+  mongo:
+    image: mongo
+  tweetapp-api:
+    build:
+      context: C:\Users\cogdotnet74\source\repos\App-Cloud-master
+      dockerfile: TweetApp-API/Dockerfile
+    environment:
+      ASPNETCORE_ENVIRONMENT: Development
+      ASPNETCORE_URLS: https://+:443;http://+:80
+    image: tweetappapi
+    ports:
+    - target: 80
+    - target: 443
+    volumes:
+    - C:\Users\cogdotnet74\AppData\Roaming\ASP.NET\Https:/root/.aspnet/https:ro
+version: '3.4'
