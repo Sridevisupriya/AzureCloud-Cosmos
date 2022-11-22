@@ -1,3 +1,6 @@
 while deploying a web api into azure web app , we need to select serverless and for database connection , we need to add connectionstring in application settings , for webapi to access database.
 likewise for angular code deployment we need to install Azure app service from extensions and add a web config file in src. For prod files to get generated we need to  use
 npm run ng build --prod  Command in terminal. Everytime we build we need to generate prod files and add web config file in dist folder before deploying code.
+
+
+--if you get file not found error on deploying angular code , then add dist/main path to path settings in azure cloud
